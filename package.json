@@ -1,0 +1,21 @@
+{
+  "name": "yohannpeltier_5_11082021",
+  "version": "1.0.0",
+  "description": "This is Project 5 of the Junior Web Developer path",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "browserslist": "last 4 versions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YohannPeltier/YohannPeltier_5_11082021.git"
+  },
+  "author": "Yohann Peltier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YohannPeltier/YohannPeltier_5_11082021/issues"
+  },
+  "homepage": "https://github.com/YohannPeltier/YohannPeltier_5_11082021#readme"
+}
