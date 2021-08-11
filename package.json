@@ -4,7 +4,7 @@
   "description": "This is Project 5 of the Junior Web Developer path",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style",
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
     "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "browserslist": "last 4 versions",
