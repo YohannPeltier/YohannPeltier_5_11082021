@@ -1,6 +1,9 @@
+//@import "./vendors/normalize/import-now";
+@import "./utils/variables";
 @import "./base/base";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/home";
 @import "./pages/cart";
 @import "./pages/items";
+@import "./components/card";

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-width: 32rem;
+  font-size: 1.6rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: #f3e9f1;
+  padding: 2rem;
+}
+.nav {
+  margin-left: auto;
+}
+.nav__link {
+  font-size: 1.8rem;
+}
+
+.card {
+  display: flex;
+  width: 40rem;
+  flex-direction: column;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(73, 73, 73, 0.43);
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+.card__img {
+  object-fit: cover;
+  margin: -1.5rem;
+  margin-bottom: 0;
+  width: calc(100% + 3rem);
+  border-radius: 1rem 1rem 0 0;
+}
+.card__name {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.card__price {
+  font-weight: 600;
+}
+.card__price::after {
+  content: " €";
+}
+
+/*# sourceMappingURL=style.css.map */
