@@ -73,7 +73,7 @@ function render() {
 		document.getElementById("addToCart").addEventListener("click", (event) => {
 			myItem.opt = document.getElementById("option").value;
 			myItem.qty = parseInt(document.getElementById("qty").value, 10);
-			let goToCart = `<a class="btn btn-success" href="/cart.html">Accéder au panier</a>`;
+			let goToCart = `<a class="btn btn-success" href="cart.html">Accéder au panier</a>`;
 			let goToCartElmt = document.getElementById("goToCard");
 			goToCartElmt.innerHTML = "";
 			goToCartElmt.insertAdjacentHTML("beforeend", goToCart);
