@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous"
+		/>
+		<link rel="StyleSheet" href="public/css/style.css" type="text/css" />
+		<title>Orinoco - Panier</title>
+		<script src="public/scripts/global.js" defer></script>
+		<script src="public/scripts/cart.js" defer></script>
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="bg-primary">
+			<nav class="container navbar navbar-light">
+				<a href="/">
+					<img
+						class="img-fluid d-inline-block align-top ms-3"
+						height="100px"
+						width="222px"
+						src="public/images/logo.png"
+						alt="Logo Orinoco"
+					/>
+				</a>
+				<ul class="nav justify-content-end">
+					<li class="nav-item">
+						<a class="nav-link mb-0 h5 navbar-brand" href="/cart.html">Panier</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<main class="container my-4">
+			<form id="needs-validation" novalidate>
+				<div class="row row-cols-1 g-4 justify-content-center">
+					<div id="noItem" class="col col-lg-9 col-xl-8 col-xxl-7">
+						<div class="card text-dark text-decoration-none shadow text-center">
+							<div class="card-body">
+								<h5 class="card-title" id="order">Il n'y a pas d'article dans le panier</h5>
+							</div>
+						</div>
+					</div>
+					<div id="cart" class="col col-lg-9 col-xl-8 col-xxl-7 d-none">
+						<div class="card text-dark text-decoration-none shadow text-end">
+							<div class="card-body">
+								<table class="table mb-0 mb-md-3">
+									<thead>
+										<tr class="d-none d-md-table-row">
+											<th class="text-start">Produit</th>
+											<th class="text-start">Option</th>
+											<th>Quantité</th>
+											<th>Prix unitaire</th>
+											<th>Prix total</th>
+										</tr>
+									</thead>
+									<tbody id="itemsCart">
+										<!-- Cart content -->
+									</tbody>
+								</table>
+								<h6 class="card-title">
+									Montant total de la commande :&nbsp;
+									<span id="totalPrice"></span>
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div id="form" class="col col-lg-9 col-xl-8 col-xxl-7 d-none">
+						<div class="card text-dark text-decoration-none shadow">
+							<div class="card-body">
+								<div class="row g-3">
+									<div class="col-md-6">
+										<label for="lastName" class="form-label">Nom</label>
+										<input
+											type="text"
+											class="form-control"
+											id="lastName"
+											pattern="(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))"
+											placeholder="Nom"
+											required
+										/>
+									</div>
+									<div class="col-md-6">
+										<label for="firstName" class="form-label">Prénom</label>
+										<input
+											type="text"
+											class="form-control"
+											id="firstName"
+											pattern="(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))"
+											placeholder="Prénom"
+											required
+										/>
+									</div>
+									<div class="col-md-9">
+										<label for="inputEmail" class="form-label">Email</label>
+										<input
+											type="email"
+											class="form-control"
+											id="inputEmail"
+											pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})"
+											placeholder="exemple@email.com"
+											required
+										/>
+									</div>
+									<div class="col-md-6">
+										<label for="inputAddress" class="form-label">Adresse</label>
+										<input
+											type="text"
+											class="form-control"
+											id="inputAddress"
+											pattern="(([a-zA-ZÀ-ÿ0-9_]+[\s\-][a-zA-ZÀ-ÿ0-9_]+)|([a-zA-ZÀ-ÿ0-9_]+)){1,10}"
+											placeholder="Adresse"
+											required
+										/>
+									</div>
+									<div class="col-md-6">
+										<label for="inputCity" class="form-label">Ville</label>
+										<input
+											type="text"
+											class="form-control"
+											id="inputCity"
+											pattern="(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}"
+											placeholder="Ville"
+											required
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col text-center">
+						<button class="btn btn-primary d-none" type="submit" id="sendCart">Valider la commande</button>
+					</div>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
