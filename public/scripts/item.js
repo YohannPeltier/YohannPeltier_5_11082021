@@ -10,7 +10,7 @@ const saveData = (data) => {
 
 // Add to cart function
 const addToCart = () => {
-	let id = myItem._id + myItem.opt;
+	let id = makeId(myItem._id, myItem.opt);
 	if (storage.getItem(id)) {
 		myItem.qty += storage.getObj(id).qty;
 	}

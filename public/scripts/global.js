@@ -39,6 +39,11 @@ const callbackError = (err) => {
 	console.log(`Check if server run and port is 3000` + err);
 };
 
+// Générer ID
+const makeId = (id, opt) => {
+	return id + opt.replace(/\s/g, "");
+};
+
 // Change number to price
 Number.prototype.viewPrice = function () {
 	let price = Intl.NumberFormat("fr-FR", {
