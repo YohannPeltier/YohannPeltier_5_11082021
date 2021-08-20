@@ -1,0 +1,32 @@
+.bg-primary {
+	background: #f3e9f1 !important;
+}
+.card-img-top {
+	-o-object-fit: cover;
+	object-fit: cover;
+	height: 15rem;
+}
+.table__td {
+	display: block;
+}
+.table__td::before {
+	content: attr(data-label);
+	float: left;
+	font-weight: bold;
+}
+@media (min-width: 768px) {
+	.table__td::before {
+		content: none;
+	}
+}
+@media (min-width: 768px) {
+	.table__td {
+		display: table-cell;
+		text-align: left;
+	}
+}
+.table__input {
+	width: 5rem;
+}
+
+/*# sourceMappingURL=../style.min.css.map */

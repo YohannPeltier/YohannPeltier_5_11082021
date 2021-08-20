@@ -4,9 +4,9 @@
   "description": "This is Project 5 of the Junior Web Developer path",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
-    "purge": "purgecss --css ./public/css/bootstrap.min.css --content cart.html index.html item.html ./**/*.js --output public/css/purge"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.min.css --style compressed",
+    "prefix": "postcss ./public/css/style.min.css --use autoprefixer -d ./public/css/prefixed/",
+    "purge": "purgecss --css ./public/css/bootstrap.min.css ./public/css/prefixed/style.min.css --content cart.html index.html item.html ./**/*.js --output public/css/purge"
   },
   "browserslist": "last 4 versions",
   "repository": {
