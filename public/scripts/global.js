@@ -14,7 +14,12 @@ const api = {
 	opt: apiOptions[store],
 };
 
-const apiUrl = `http://localhost:3000/api/${api.store}`;
+const domaine =
+	location.hostname === "localhost" || location.hostname === "127.0.0.1"
+		? `http://localhost:3000/` //Local server
+		: `https://pandaceltica.fr/OCP5/`; //Remote server
+
+const apiUrl = `${domaine}api/${api.store}`;
 
 const storage = localStorage;
 
