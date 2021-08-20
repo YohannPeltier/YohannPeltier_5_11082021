@@ -100,7 +100,7 @@ const successOrder = (data) => {
 	orderElmt.innerHTML = `<div class="alert alert-success mb-0" role="alert">
 								Votre commande est validé<br/><br/><br/>Commande n° :<br/><br/>${data.orderId}
 	  						</div>`;
-	render(myCart);
+	render();
 };
 
 // Show cart
@@ -187,8 +187,5 @@ const render = () => {
 
 // Run cart render
 let myCart = new Cart();
-document.readyState === "loading"
-	? window.addEventListener("DOMContentLoaded", () => (myCart.create() ? render() : false))
-	: myCart.create()
-	? render()
-	: false;
+myCart.create();
+document.readyState !== "loading" ? render() : window.addEventListener("DOMContentLoaded", () => render());

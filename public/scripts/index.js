@@ -24,6 +24,6 @@ const render = () => {
 };
 
 // Render all products
-document.readyState === "loading"
-	? document.addEventListener("DOMContentLoaded", () => callApi(apiUrl, "", saveData))
-	: callApi(apiUrl, "", saveData);
+document.readyState !== "loading"
+	? callApi(apiUrl, "", saveData)
+	: document.addEventListener("DOMContentLoaded", () => callApi(apiUrl, "", saveData));

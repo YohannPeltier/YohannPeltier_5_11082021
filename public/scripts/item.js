@@ -88,6 +88,6 @@ function render() {
 
 // Run product render
 
-document.readyState === "loading"
-	? document.addEventListener("DOMContentLoaded", () => callApi(apiUrl, itemId, saveData))
-	: callApi(apiUrl, itemId, saveData);
+document.readyState !== "loading"
+	? callApi(apiUrl, itemId, saveData)
+	: document.addEventListener("DOMContentLoaded", () => callApi(apiUrl, itemId, saveData));
