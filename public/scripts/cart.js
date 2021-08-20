@@ -107,10 +107,7 @@ const successOrder = (data) => {
 const changeQty = (event, qty) => {
 	// remove the first 4 characters to get the id
 	const id = event.target.id.substr(4);
-	console.log(event);
-	console.log(qty, event.target.value);
 	qty !== 0 ? (qty = parseInt(event.target.value, 10)) : (qty = 0);
-	console.log(qty, parseInt(event.target.value, 10));
 	const priceItem = document.getElementById(`pi_${id}`).innerText.replace(/[^0-9.-]+/g, "");
 	const totalPriceItem = priceItem * qty;
 
