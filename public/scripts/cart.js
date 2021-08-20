@@ -187,4 +187,8 @@ const render = () => {
 
 // Run cart render
 let myCart = new Cart();
-myCart.create() ? render() : false;
+document.readyState === "loading"
+	? window.addEventListener("DOMContentLoaded", () => (myCart.create() ? render() : false))
+	: myCart.create()
+	? render()
+	: false;
