@@ -1,14 +1,14 @@
-let items = {};
+let myItems = {};
 
 const saveData = (data) => {
-	items = data;
+	myItems = data;
 	render();
 };
 
 // Show all products
 const render = () => {
 	const container = document.getElementById("container");
-	for (item of items) {
+	for (item of myItems) {
 		let card = `<div class="col">
 						<a class="card text-dark text-decoration-none shadow" href="item.html?id=${item._id}">
 							<img class="card-img-top cover-fit h-7" src="${item.imageUrl}" alt="${item.name}"/>

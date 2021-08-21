@@ -28,6 +28,7 @@ const callApi = (url, id, callback) => {
 	fetch(url + id)
 		.then((responses) => responses.json())
 		.then((data) => {
+			console.log("Data collected", data);
 			callback(data);
 		})
 		.catch((err) => {
@@ -41,7 +42,9 @@ const callbackError = (err) => {
 
 // Générer ID
 const makeId = (id, opt) => {
-	return id + opt.replace(/\s/g, "");
+	const formatId = id + opt.replace(/\s/g, "");
+	console.log("Id", id);
+	return formatId;
 };
 
 // Change number to price

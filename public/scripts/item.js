@@ -15,6 +15,7 @@ const addToCart = () => {
 		myItem.qty += storage.getObj(id).qty;
 	}
 	myItem.qty < 1 ? storage.removeItem(id) : storage.setObj(id, myItem);
+	console.log("Item added to local storage", storage.getObj(id));
 };
 
 // Product render
@@ -83,6 +84,10 @@ function render() {
 		// Show product
 		noItemElmt.classList.add("d-none");
 		itemElmt.classList.remove("d-none");
+	} else {
+		// Show no product
+		itemElmt.classList.add("d-none");
+		noItemElmt.classList.remove("d-none");
 	}
 }
 
