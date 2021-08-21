@@ -1,3 +1,7 @@
+svg {
+	pointer-events: none;
+}
+
 .bg-primary {
 	background: $color-primary !important;
 }
