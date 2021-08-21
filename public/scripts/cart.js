@@ -149,9 +149,9 @@ const render = () => {
 								<td class="d-block d-md-table-cell table__td text-end" id="pi_${id}" data-label="Prix unitaire">${item.price.viewPrice()}</td>
 								<td class="d-block d-md-table-cell table__td text-end" id="tpi_${id}" data-label="Prix total">${totalPriceItem.viewPrice()}</td>
 								<td class="d-block d-md-table-cell table__td text-end" data-label="Supprimer">
-									<a id="del_${id}" aria-label="supprimer l'article">
+									<a id="del_${id}" aria-label="supprimer l'article" class="cursor-pointer">
 									<svg xmlns="http://www.w3.org/2000/svg"
-										class="bi bi-x-circle text-danger"
+										class="bi bi-x-circle text-danger pe-none"
 										width="24"
 										height="24"
 										fill="currentColor"
