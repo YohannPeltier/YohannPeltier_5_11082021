@@ -6,9 +6,12 @@ svg {
 	background: $color-primary !important;
 }
 
-.card-img-top {
+.cover-fit {
 	object-fit: cover;
-	height: 20rem;
+}
+
+.h-7 {
+	height: 12rem;
 }
 
 .table {

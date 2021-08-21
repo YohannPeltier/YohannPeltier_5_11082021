@@ -11,7 +11,7 @@ const render = () => {
 	for (item of items) {
 		let card = `<div class="col">
 						<a class="card text-dark text-decoration-none shadow" href="item.html?id=${item._id}">
-							<img class="card-img-top" src="${item.imageUrl}" alt="${item.name}"/>
+							<img class="card-img-top cover-fit h-7" src="${item.imageUrl}" alt="${item.name}"/>
 							<div class="card-body">
 								<h4 class="card-title">${item.name}</h4>
 								<h5 class="card-title">${item.price.viewPrice()}</h5>
