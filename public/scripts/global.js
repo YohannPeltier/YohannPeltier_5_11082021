@@ -17,9 +17,9 @@ const api = {
 const domaine =
 	location.hostname === "localhost" || location.hostname === "127.0.0.1"
 		? `http://localhost:3000/` //Local server
-		: `https://pandaceltica.fr/OCP5/`; //Remote server
+		: `https://yohannpeltier.com/OCP5/`; //Remote server
 
-const apiUrl = `${domaine}api/${api.store}`;
+let apiUrl = `${domaine}api/${api.store}`;
 
 const storage = localStorage;
 
@@ -28,7 +28,7 @@ const callApi = (url, id, callback) => {
 	fetch(url + id)
 		.then((responses) => responses.json())
 		.then((data) => {
-			console.log("Data collected", data);
+			//console.log("Data collected", data);
 			callback(data);
 		})
 		.catch((err) => {
@@ -37,13 +37,16 @@ const callApi = (url, id, callback) => {
 };
 // API call Error
 const callbackError = (err) => {
-	console.log(`Check if server run and port is 3000` + err);
+	//console.log(`Check if server run and port is 3000` + err);
+	console.log("Remote server connection...");
+	apiUrl = `https://yohannpeltier.com/OCP5/api/${api.store}`;
+	start();
 };
 
 // Générer ID
 const makeId = (id, opt) => {
 	const formatId = id + opt.replace(/\s/g, "");
-	console.log("Id", id);
+	//console.log("Generated id", id);
 	return formatId;
 };
 

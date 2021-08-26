@@ -23,7 +23,7 @@ class Cart {
 		for (let storageId in storage) {
 			storage.getItem(storageId) ? this.items.push(storage.getObj(storageId)) : false;
 		}
-		console.log(this.items[0] ? "Item(s) add to object" : "No item add to object", this.items);
+		//console.log(this.items[0] ? "Item(s) add to object" : "No item add to object", this.items);
 	};
 
 	// Update qty
@@ -43,7 +43,7 @@ class Cart {
 			storage.removeItem(id);
 			state = "delete";
 		}
-		console.log("Update cart", state);
+		//console.log("Update cart", state);
 		return state;
 	};
 
@@ -74,7 +74,7 @@ class Cart {
 		})
 			.then((response) => response.json())
 			.then((data) => {
-				console.log("Cart sent success", data);
+				//console.log("Cart sent success", data);
 				data.orderId ? callback(data) : false;
 			})
 			.catch((err) => callbackError(err));
@@ -87,7 +87,7 @@ class Cart {
 		this.contact = {};
 		this.totalPrice = 0;
 		storage.clear();
-		console.log("Cart clear", storage, this);
+		//console.log("Cart clear", storage, this);
 	};
 }
 
@@ -97,6 +97,8 @@ const formElmt = document.getElementById("form");
 const itemsCartElmt = document.getElementById("itemsCart");
 const totalPriceCartElmt = document.getElementById("totalPrice");
 const buttonElmt = document.getElementById("sendCart");
+
+const start = () => myCart.submit(successOrder);
 
 // Show success order message
 const successOrder = (data) => {

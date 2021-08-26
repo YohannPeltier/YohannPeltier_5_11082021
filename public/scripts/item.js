@@ -15,7 +15,7 @@ const addToCart = () => {
 		myItem.qty += storage.getObj(id).qty;
 	}
 	myItem.qty < 1 ? storage.removeItem(id) : storage.setObj(id, myItem);
-	console.log("Item added to local storage", storage.getObj(id));
+	//console.log("Item added to local storage", storage.getObj(id));
 };
 
 // Product render
@@ -91,8 +91,6 @@ function render() {
 	}
 }
 
-// Run product render
-
-document.readyState !== "loading"
-	? callApi(apiUrl, itemId, saveData)
-	: document.addEventListener("DOMContentLoaded", () => callApi(apiUrl, itemId, saveData));
+// Render all products
+const start = () => callApi(apiUrl, itemId, saveData);
+document.readyState !== "loading" ? start() : document.addEventListener("DOMContentLoaded", () => start());
